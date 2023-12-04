@@ -3,7 +3,7 @@
 # Default compilation flags, these can be overridden in Makefile.local
 # or in environment like: CXXFLAGS=... make
 CXX ?= g++
-CXXFLAGS ?= -O2 -g3 -ggdb -Wall -Wextra -Wno-sign-compare
+CXXFLAGS ?= -O2 -g3 -ggdb -Wall -Wextra -Wno-sign-compare --std=c++17
 DESTDIR ?=
 prefix ?= /usr/local
 

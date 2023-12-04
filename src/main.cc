@@ -2,12 +2,38 @@
 #include "options.hh"
 #include "focusstack.hh"
 #include <opencv2/core.hpp>
+#include <filesystem>
 
 #ifndef GIT_VERSION
 #define GIT_VERSION "unknown"
 #endif
 
 using namespace focusstack;
+
+/**
+ * @brief Retrieves a list of JPEG and PNG files from a specified folder.
+ *
+ * This function searches the given directory for all files with .jpg or .png
+ * extensions and returns their names in a std::vector.
+ *
+ * @param folderName The name of the folder to search.
+ * @return std::vector<std::string> A vector containing the full path and filename.
+ */
+std::vector<std::string> find_files(const std::string& folderName) {
+	std::vector<std::string> filepaths;
+
+	for (const auto& entry : std::filesystem::directory_iterator(folderName)) {
+		auto path = entry.path();
+		auto ext = path.extension().string();
+
+		if (ext == ".jpg" || ext == ".png") {
+			filepaths.push_back(path.string());
+		}
+	}
+
+	return filepaths;
+}
+
 
 int main(int argc, const char *argv[])
 {
@@ -47,11 +73,14 @@ int main(int argc, const char *argv[])
     return 0;
   }
 
-  if (options.has_flag("--help") || options.get_filenames().size() < 2)
+  if (options.has_flag("--help") || (!options.has_flag("--input-folder")  && options.get_filenames().size() < 2 ) )
   {
     std::cerr << "Usage: " << argv[0] << " [options] file1.jpg file2.jpg ...\n";
     std::cerr << "\n";
-    std::cerr << "Output file options:\n"
+	std::cerr << "Input file options:\n"
+		"  --input-folder=<folder>           Set input folder to add from\n";
+
+	std::cerr << "Output file options:\n"
                  "  --output=output.jpg           Set output filename\n"
                  "  --depthmap=depthmap.png       Write a depth map image (default disabled)\n"
                  "  --3dview=3dview.png           Write a 3D preview image (default disabled)\n"
@@ -93,8 +122,20 @@ int main(int argc, const char *argv[])
     return 1;
   }
 
+  
+  // added --input-folder option, scans the dir for jpg/pngs
+  if (options.has_flag("--input-folder"))
+  {
+	  std::vector<std::string>file_list;
+	  file_list = find_files( options.get_arg("--input-folder", ".") );
+	  stack.set_inputs( file_list);
+
+  } else {
+
+	  stack.set_inputs(options.get_filenames());
+  }
+
   // Output file options
-  stack.set_inputs(options.get_filenames());
   stack.set_output(options.get_arg("--output", "output.jpg"));
   stack.set_depthmap(options.get_arg("--depthmap", ""));
   stack.set_3dview(options.get_arg("--3dview", ""));

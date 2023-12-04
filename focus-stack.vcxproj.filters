@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\fast_bilateral.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\focusstack.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\histogrampercentile.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logger.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\options.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\radialfilter.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_3dpreview.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_align.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_background_removal.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_denoise.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_depthmap.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_depthmap_inpaint.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_focusmeasure.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_grayscale.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_loadimg.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_merge.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_reassign.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_saveimg.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_wavelet.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_wavelet_opencl.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\task_wavelet_templates.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\worker.hh">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\focusstack.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\histogrampercentile.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logger.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\options.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\radialfilter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\radialfilter_tests.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_3dpreview.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_align.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_background_removal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_denoise.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_depthmap.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_depthmap_inpaint.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_focusmeasure.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_grayscale.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_grayscale_tests.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_loadimg.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_merge.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_reassign.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_saveimg.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_wavelet.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_wavelet_opencl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_wavelet_opencl_tests.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\task_wavelet_tests.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\worker.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\task_wavelet_opencl_kernels.cl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="vcpkg.json" />
+  </ItemGroup>
+</Project>

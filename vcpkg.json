@@ -1,0 +1,32 @@
+{
+  "name": "focusstack",
+  "version-string": "0.0.1",
+  "dependencies": [
+    {
+      "name": "imgui",
+      "default-features": true,
+      "features": [
+        "win32-binding",
+        "dx12-binding",
+        "glfw-binding",
+        "opengl3-binding"
+      ]
+    },
+    {
+      "name": "opencv",
+      "default-features": false,
+      "features": [
+        "contrib",
+        "jpeg",
+        "png",
+        "opengl",
+        "nonfree",
+        "world"
+      ]
+    },
+    "argparse",
+    "gtest",
+    "glfw3"
+  ]
+}
+

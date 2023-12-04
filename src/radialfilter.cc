@@ -1,6 +1,10 @@
 #include "radialfilter.hh"
 #include <opencv2/imgproc.hpp>
 
+#ifndef M_PI
+const double M_PI = 3.14159265358979323846;
+#endif
+
 using namespace focusstack;
 
 static inline float sq(float x) { return x * x; }

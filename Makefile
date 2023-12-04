@@ -3,7 +3,7 @@
 # Default compilation flags, these can be overridden in Makefile.local
 # or in environment like: CXXFLAGS=... make
 CXX ?= g++
-CXXFLAGS ?= -O2 -g3 -ggdb -Wall -Wextra -Wno-sign-compare --std=c++17
+CXXFLAGS ?= -O2 -g3 -ggdb -Wall -Wextra -Wno-sign-compare
 DESTDIR ?=
 prefix ?= /usr/local
 
@@ -12,7 +12,7 @@ CXXFLAGS += $(shell pkg-config --silence-errors --cflags-only-I opencv4 || pkg-c
 LDFLAGS += $(shell pkg-config --silence-errors --libs-only-L opencv4 || pkg-config --silence-errors --cflags-only-I opencv)
 
 # Required compilation options
-CXXFLAGS += --std=c++14
+CXXFLAGS += --std=c++17
 LDFLAGS += -lpthread -lm
 LDFLAGS += -lopencv_video -lopencv_imgcodecs -lopencv_photo -lopencv_imgproc -lopencv_core
 

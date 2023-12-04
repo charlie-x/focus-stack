@@ -2,3 +2,10 @@
 *.kdev4
 build
 Makefile.local
+/.vs/focus-stack
+/vcpkg_installed/x64-windows-static
+/x64
+/depth.jpg
+/out
+/run.bat
+/test.jpg

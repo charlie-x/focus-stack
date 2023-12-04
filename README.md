@@ -29,6 +29,10 @@ For advanced usage, see `--help` for list of all options or [check the manual](d
 
     Usage: build/focus-stack [options] file1.jpg file2.jpg ...
 
+    Input file options:
+      --input-folder=<path>        Full path to a directory of jpg/png files to process
+    
+
     Output file options:
       --output=output.jpg           Set output filename
       --depthmap=depthmap.png       Write a depth map image (default disabled)

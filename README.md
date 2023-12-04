@@ -136,6 +136,9 @@ In Visual Studio command prompt, execute:
 
     nmake -f Makefile.windows
 
+Optionally open the Solution file, with vcpkg integrated into VS and build
+
+
 Building on Mac OS X
 --------------------
 Install [Homebrew](https://brew.sh/) by running this in terminal:
